@@ -50,15 +50,10 @@ export class Phonebook extends Component {
 
     deleteFromContacts = (evt) => {
         const elemId = evt.target.parentElement.id;
-        console.log(this.state.contacts.filter(elem => {
-            return elem.id !== elemId
-        }))
 
         this.setState({contacts: this.state.contacts.filter(elem => {
             return elem.id !== elemId
         })})
-
-        console.log(evt.target.parentElement.id)
     }
 
     render() {
